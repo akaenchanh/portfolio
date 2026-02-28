@@ -2,6 +2,8 @@
 
 Personal portfolio built with Next.js, TypeScript, and Tailwind CSS. Statically exported and deployed to GitHub Pages.
 
+> **Note:** This site is deployed at `https://akaenchanh.github.io/portfolio/`
+
 ## Development
 
 ```bash
