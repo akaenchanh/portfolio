@@ -5,19 +5,27 @@ export interface SkillCategory {
 
 export const skills: SkillCategory[] = [
   {
-    category: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "HTML/CSS"],
+    category: "Programming Languages",
+    items: ["Java (OCA & OCP Certified)", "C", "Python", "R", "SQL", "HTML/CSS"],
   },
   {
     category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Vue.js"],
+    items: ["React", "Angular", "Vue.js", "Next.js"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis"],
+    category: "Backend & Frameworks",
+    items: ["Java Spring", "Node.js", "JEE", "JSP", "Spring MVC", "Spring Security"],
+  },
+  {
+    category: "Data & Analytics",
+    items: ["Power BI", "Machine Learning", "Data Visualization"],
   },
   {
     category: "DevOps & Tools",
-    items: ["Git", "Docker", "AWS", "CI/CD", "Linux"],
+    items: ["Git", "GitHub", "GitLab", "Docker", "Amazon AWS", "Postman", "Maven"],
+  },
+  {
+    category: "Design & Multimedia",
+    items: ["Photoshop", "Adobe Premiere Pro"],
   },
 ];

@@ -62,9 +62,9 @@ export const translations: Record<Locale, Translations> = {
       contact: "Contact",
     },
     hero: {
-      role: "Software Engineer",
+      role: "Data Scientist | Web Developer",
       tagline:
-        "I build reliable, scalable systems and craft clean software that solves real problems. Currently focused on full-stack development and distributed systems.",
+        "Recently graduated, I am enthusiastic and eager to learn and actively contribute to your team. Passionate about data science, AI, and full-stack development.",
       cta: "Get in touch",
       ctaSecondary: "View my work",
       resume: "Resume",
@@ -72,41 +72,65 @@ export const translations: Record<Locale, Translations> = {
     about: {
       title: "About",
       paragraphs: [
-        "Hi, I'm Annabelle — a software engineer who loves turning complex problems into simple, elegant solutions. I care deeply about code quality, developer experience, and building products that people actually enjoy using.",
-        "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or learning something completely unrelated to tech. I believe the best engineers are endlessly curious.",
+        "Hi, I'm Annabelle — a Data Scientist and Web Developer with a passion for turning data into insights and building innovative solutions. I hold an engineering degree from ESIEE Paris, specialized in Data Science and Artificial Intelligence, and completed a Master's in Data Science at Heriot-Watt University in Edinburgh.",
+        "I have experience in full-stack development, working with Java Spring, Node.js, Angular, React, and Vue.js. I'm also passionate about data analysis, machine learning, and creating interactive dashboards with Power BI, R, and Python. When I'm not coding, you'll find me playing tennis, practicing piano, or exploring new technologies.",
       ],
     },
     experience: {
       title: "Experience",
       items: [
         {
-          company: "Company Name",
-          role: "Senior Software Engineer",
-          period: "2024 — Present",
+          company: "Disneyland",
+          role: "FullStack Engineer",
+          period: "October 2024 — Present",
           highlights: [
-            "Led development of a customer-facing platform serving 100k+ users",
-            "Designed and implemented microservices architecture reducing latency by 40%",
-            "Mentored a team of 4 junior developers through code reviews and pair programming",
+            "Working in the ecommerce team developing and maintaining web applications",
+            "Building scalable solutions for online commerce platforms",
+            "Collaborating with cross-functional teams to deliver high-quality user experiences",
           ],
         },
         {
-          company: "Previous Company",
-          role: "Software Engineer",
-          period: "2022 — 2024",
+          company: "Oxyl - OxA",
+          role: "FullStack Developer",
+          period: "October 2023 — October 2024",
           highlights: [
-            "Built RESTful APIs and GraphQL services powering the core product",
-            "Migrated legacy monolith to a modern React + Node.js stack",
-            "Improved CI/CD pipeline reducing deployment time from 30 min to 5 min",
+            "Developed an Oracle server with MVC architecture and microservices",
+            "Created APIs to integrate various artificial intelligence systems",
+            "Built a chatbot with a user-friendly interface",
+            "OxA is an AI-powered tool used within the company to assist collaborators daily, serving as a personalized coach during training",
           ],
         },
         {
-          company: "First Company",
-          role: "Junior Software Engineer",
-          period: "2020 — 2022",
+          company: "Engie - eDayWork",
+          role: "FullStack Developer",
+          period: "May — July 2023",
           highlights: [
-            "Developed full-stack features using TypeScript, React, and PostgreSQL",
-            "Collaborated with product and design teams in an agile environment",
-            "Wrote comprehensive unit and integration tests achieving 90% coverage",
+            "Onboarded to the platform and added absence management features",
+            "Implemented personalized explanations for executive package benefits",
+            "Modified and improved the user interface",
+          ],
+        },
+        {
+          company: "NewroFactory - Oxyl",
+          role: "FullStack Developer",
+          period: "February — May 2023",
+          highlights: [
+            "Developed CRUD management through web services, web application, and command-line interface",
+            "Iterative development replacing legacy frameworks step by step",
+            "Implemented code reviews at each stage to ensure best practices and modular architecture",
+            "Practiced Scrum methodology and TDD approach with training on Git, Maven, Angular, React, VueJS, Web services, and AWS",
+          ],
+        },
+        {
+          company: "Setec eocen",
+          role: "Data Scientist",
+          period: "May — August 2022",
+          highlights: [
+            "Reviewed and analyzed AI use cases for the innovation program",
+            "Studied the relevance of AI in Project Management",
+            "Developed AI solutions using machine learning",
+            "Identified and implemented the best AI approaches",
+            "Developed algorithms in Python",
           ],
         },
       ],
@@ -117,27 +141,22 @@ export const translations: Record<Locale, Translations> = {
       viewDemo: "Demo",
       items: [
         {
-          name: "Cloud Dashboard",
+          name: "Data Professions Survey Analysis",
           description:
-            "A real-time monitoring dashboard for cloud infrastructure with live metrics, alerting, and resource management.",
-          tech: ["React", "TypeScript", "D3.js", "WebSocket"],
-          github: "https://github.com/annabellekaenchanh/cloud-dashboard",
-          demo: "https://cloud-dashboard.example.com",
+            "Personal project analyzing a survey on data professions using Power BI. Extracted, cleaned, and transformed raw data to create an interactive dashboard and understand market trends.",
+          tech: ["Power BI", "Data Analysis", "Data Visualization"],
         },
         {
-          name: "CLI Task Runner",
+          name: "Titanic Dataset Algorithm Portfolio",
           description:
-            "A fast, extensible command-line tool for automating development workflows with plugin support and parallel execution.",
-          tech: ["Rust", "TOML", "GitHub Actions"],
-          github: "https://github.com/annabellekaenchanh/cli-task-runner",
+            "5th year project using various machine learning algorithms for Titanic dataset analysis. Continuously improved the portfolio by exploring new methods and adjusting hyperparameters to optimize results.",
+          tech: ["Python", "Machine Learning", "Data Science"],
         },
         {
-          name: "Recipe API",
+          name: "Data Visualization Dashboards",
           description:
-            "A RESTful API for managing and searching recipes with full-text search, authentication, and rate limiting.",
-          tech: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-          github: "https://github.com/annabellekaenchanh/recipe-api",
-          demo: "https://recipe-api.example.com",
+            "4th year project creating interactive dashboards in R and Python. Cleaned data from an online dataset, designed interactive dashboards, and performed data analysis and interpretation.",
+          tech: ["R", "Python", "Data Visualization", "Dashboard"],
         },
       ],
     },
@@ -145,20 +164,28 @@ export const translations: Record<Locale, Translations> = {
       title: "Skills",
       categories: [
         {
-          category: "Languages",
-          items: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "HTML/CSS"],
+          category: "Programming Languages",
+          items: ["Java (OCA & OCP Certified)", "C", "Python", "R", "SQL", "HTML/CSS"],
         },
         {
           category: "Frontend",
-          items: ["React", "Next.js", "Tailwind CSS", "Vue.js"],
+          items: ["React", "Angular", "Vue.js", "Next.js"],
         },
         {
-          category: "Backend",
-          items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis"],
+          category: "Backend & Frameworks",
+          items: ["Java Spring", "Node.js", "JEE", "JSP", "Spring MVC", "Spring Security"],
+        },
+        {
+          category: "Data & Analytics",
+          items: ["Power BI", "Machine Learning", "Data Visualization"],
         },
         {
           category: "DevOps & Tools",
-          items: ["Git", "Docker", "AWS", "CI/CD", "Linux"],
+          items: ["Git", "GitHub", "GitLab", "Docker", "Amazon AWS", "Postman", "Maven"],
+        },
+        {
+          category: "Design & Multimedia",
+          items: ["Photoshop", "Adobe Premiere Pro"],
         },
       ],
     },
@@ -177,9 +204,9 @@ export const translations: Record<Locale, Translations> = {
       contact: "Contact",
     },
     hero: {
-      role: "Ingénieure logiciel",
+      role: "Data Scientist | Développeuse Web",
       tagline:
-        "Je conçois des systèmes fiables et évolutifs, et je développe des logiciels propres qui résolvent de vrais problèmes. Actuellement spécialisée en développement full-stack et systèmes distribués.",
+        "Fraîchement diplômée, je suis enthousiaste et désireuse d'apprendre et de contribuer activement à votre équipe. Passionnée par la data science, l'IA et le développement full-stack.",
       cta: "Me contacter",
       ctaSecondary: "Voir mon parcours",
       resume: "CV",
@@ -187,41 +214,65 @@ export const translations: Record<Locale, Translations> = {
     about: {
       title: "À propos",
       paragraphs: [
-        "Bonjour, je suis Annabelle — une ingénieure logiciel passionnée par la transformation de problèmes complexes en solutions simples et élégantes. J'accorde une grande importance à la qualité du code, à l'expérience développeur et à la création de produits que les gens aiment vraiment utiliser.",
-        "Quand je ne code pas, vous me trouverez en train d'explorer de nouvelles technologies, de contribuer à l'open source ou d'apprendre quelque chose de complètement différent du monde de la tech. Je crois que les meilleurs ingénieurs sont éternellement curieux.",
+        "Bonjour, je suis Annabelle — Data Scientist et Développeuse Web passionnée par la transformation de données en insights et la création de solutions innovantes. Je suis diplômée d'ESIEE Paris, spécialisée en Data Science et Intelligence Artificielle, et j'ai complété un Master en Data Science à l'Université Heriot-Watt d'Édimbourg.",
+        "J'ai de l'expérience en développement full-stack, travaillant avec Java Spring, Node.js, Angular, React et Vue.js. Je suis également passionnée par l'analyse de données, le machine learning et la création de tableaux de bord interactifs avec Power BI, R et Python. Quand je ne code pas, vous me trouverez en train de jouer au tennis, de pratiquer le piano ou d'explorer de nouvelles technologies.",
       ],
     },
     experience: {
       title: "Expérience",
       items: [
         {
-          company: "Nom de l'entreprise",
-          role: "Ingénieure logiciel senior",
-          period: "2024 — Présent",
+          company: "Disneyland",
+          role: "Ingénieure FullStack",
+          period: "Octobre 2024 — Présent",
           highlights: [
-            "Direction du développement d'une plateforme client servant plus de 100 000 utilisateurs",
-            "Conception et implémentation d'une architecture microservices réduisant la latence de 40 %",
-            "Mentorat d'une équipe de 4 développeurs juniors via des revues de code et du pair programming",
+            "Travail dans l'équipe ecommerce développant et maintenant des applications web",
+            "Construction de solutions évolutives pour les plateformes de commerce en ligne",
+            "Collaboration avec des équipes interfonctionnelles pour offrir des expériences utilisateur de haute qualité",
           ],
         },
         {
-          company: "Entreprise précédente",
-          role: "Ingénieure logiciel",
-          period: "2022 — 2024",
+          company: "Oxyl - OxA",
+          role: "Développeuse FullStack",
+          period: "Octobre 2023 — Octobre 2024",
           highlights: [
-            "Développement d'APIs REST et de services GraphQL alimentant le produit principal",
-            "Migration d'un monolithe vers une stack moderne React + Node.js",
-            "Amélioration du pipeline CI/CD réduisant le temps de déploiement de 30 min à 5 min",
+            "Développement d'un serveur Oracle avec architecture MVC et microservices",
+            "Création d'APIs pour intégrer différents systèmes d'intelligence artificielle",
+            "Création d'un chatbot avec une interface utilisateur",
+            "OxA est un outil alimenté par l'IA utilisé au sein de l'entreprise pour accompagner les collaborateurs au quotidien, servant de coach personnalisé lors des formations",
           ],
         },
         {
-          company: "Première entreprise",
-          role: "Ingénieure logiciel junior",
-          period: "2020 — 2022",
+          company: "Engie - eDayWork",
+          role: "Développeuse FullStack",
+          period: "Mai — Juillet 2023",
           highlights: [
-            "Développement de fonctionnalités full-stack avec TypeScript, React et PostgreSQL",
-            "Collaboration avec les équipes produit et design dans un environnement agile",
-            "Rédaction de tests unitaires et d'intégration complets atteignant 90 % de couverture",
+            "Prise en main de la plateforme et ajout des fonctionnalités de gestion des absences",
+            "Implémentation d'explications personnalisées pour les avantages du forfait cadre",
+            "Modification et amélioration de l'interface utilisateur",
+          ],
+        },
+        {
+          company: "NewroFactory - Oxyl",
+          role: "Développeuse FullStack",
+          period: "Février — Mai 2023",
+          highlights: [
+            "Développement de la gestion CRUD via des services web, application web et interface en ligne de commande",
+            "Développement itératif remplaçant les frameworks legacy étape par étape",
+            "Mise en place de revues de code à chaque étape pour assurer les bonnes pratiques et l'architecture modulaire",
+            "Pratique de la méthodologie Scrum et approche TDD avec formation sur Git, Maven, Angular, React, VueJS, Web services et AWS",
+          ],
+        },
+        {
+          company: "Setec eocen",
+          role: "Data Scientist",
+          period: "Mai — Août 2022",
+          highlights: [
+            "Examen et analyse des cas d'usage IA du programme d'innovation",
+            "Étude de la pertinence de l'IA dans la Gestion de Projet",
+            "Développement de solutions IA utilisant le machine learning",
+            "Identification et implémentation des meilleures approches IA",
+            "Développement d'algorithmes en Python",
           ],
         },
       ],
@@ -232,27 +283,22 @@ export const translations: Record<Locale, Translations> = {
       viewDemo: "Démo",
       items: [
         {
-          name: "Cloud Dashboard",
+          name: "Analyse d'un sondage sur les professions de la data",
           description:
-            "Un tableau de bord de monitoring en temps réel pour l'infrastructure cloud avec des métriques live, des alertes et la gestion des ressources.",
-          tech: ["React", "TypeScript", "D3.js", "WebSocket"],
-          github: "https://github.com/annabellekaenchanh/cloud-dashboard",
-          demo: "https://cloud-dashboard.example.com",
+            "Projet personnel utilisant Power BI pour analyser un sondage sur les professions de la data. Extraction, nettoyage et transformation des données brutes pour créer un tableau de bord interactif et comprendre les tendances du marché.",
+          tech: ["Power BI", "Analyse de données", "Visualisation de données"],
         },
         {
-          name: "CLI Task Runner",
+          name: "Portfolio d'algorithmes pour l'analyse du jeu de données sur le Titanic",
           description:
-            "Un outil en ligne de commande rapide et extensible pour automatiser les workflows de développement avec support de plugins et exécution parallèle.",
-          tech: ["Rust", "TOML", "GitHub Actions"],
-          github: "https://github.com/annabellekaenchanh/cli-task-runner",
+            "Projet de 5ème année utilisant différents algorithmes d'apprentissage automatique pour l'analyse du dataset Titanic. Amélioration continue du portfolio en explorant de nouvelles méthodes et en ajustant les hyperparamètres pour optimiser les résultats.",
+          tech: ["Python", "Machine Learning", "Data Science"],
         },
         {
-          name: "Recipe API",
+          name: "Création de dashboards en R et Python",
           description:
-            "Une API RESTful pour gérer et rechercher des recettes avec recherche plein texte, authentification et limitation de débit.",
-          tech: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-          github: "https://github.com/annabellekaenchanh/recipe-api",
-          demo: "https://recipe-api.example.com",
+            "Projet de 4ème année créant des tableaux de bord interactifs en R et Python. Nettoyage de données d'un jeu de données trouvé sur Internet, conception d'un dashboard interactif, analyse et interprétation des données.",
+          tech: ["R", "Python", "Visualisation de données", "Dashboard"],
         },
       ],
     },
@@ -260,20 +306,28 @@ export const translations: Record<Locale, Translations> = {
       title: "Compétences",
       categories: [
         {
-          category: "Langages",
-          items: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "HTML/CSS"],
+          category: "Langages de programmation",
+          items: ["Java (Certifications OCA et OCP)", "C", "Python", "R", "SQL", "HTML/CSS"],
         },
         {
           category: "Frontend",
-          items: ["React", "Next.js", "Tailwind CSS", "Vue.js"],
+          items: ["React", "Angular", "Vue.js", "Next.js"],
         },
         {
-          category: "Backend",
-          items: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis"],
+          category: "Backend & Frameworks",
+          items: ["Java Spring", "Node.js", "JEE", "JSP", "Spring MVC", "Spring Security"],
+        },
+        {
+          category: "Data & Analytics",
+          items: ["Power BI", "Machine Learning", "Visualisation de données"],
         },
         {
           category: "DevOps & Outils",
-          items: ["Git", "Docker", "AWS", "CI/CD", "Linux"],
+          items: ["Git", "GitHub", "GitLab", "Docker", "Amazon AWS", "Postman", "Maven"],
+        },
+        {
+          category: "Design & Multimédia",
+          items: ["Photoshop", "Adobe Premiere Pro"],
         },
       ],
     },
