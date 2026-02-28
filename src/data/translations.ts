@@ -4,6 +4,7 @@ export interface ProjectItem {
   name: string;
   description: string;
   tech: string[];
+  category: string;
   github?: string;
   demo?: string;
 }
@@ -40,6 +41,8 @@ export interface Translations {
     title: string;
     viewCode: string;
     viewDemo: string;
+    allCategories: string;
+    noProjects: string;
     items: ProjectItem[];
   };
   skills: {
@@ -139,24 +142,29 @@ export const translations: Record<Locale, Translations> = {
       title: "Projects",
       viewCode: "Code",
       viewDemo: "Demo",
+      allCategories: "All",
+      noProjects: "No projects found",
       items: [
         {
           name: "Data Professions Survey Analysis",
           description:
             "Personal project analyzing a survey on data professions using Power BI. Extracted, cleaned, and transformed raw data to create an interactive dashboard and understand market trends.",
           tech: ["Power BI", "Data Analysis", "Data Visualization"],
+          category: "Data Science",
         },
         {
           name: "Titanic Dataset Algorithm Portfolio",
           description:
             "5th year project using various machine learning algorithms for Titanic dataset analysis. Continuously improved the portfolio by exploring new methods and adjusting hyperparameters to optimize results.",
           tech: ["Python", "Machine Learning", "Data Science"],
+          category: "Data Science",
         },
         {
           name: "Data Visualization Dashboards",
           description:
             "4th year project creating interactive dashboards in R and Python. Cleaned data from an online dataset, designed interactive dashboards, and performed data analysis and interpretation.",
           tech: ["R", "Python", "Data Visualization", "Dashboard"],
+          category: "Data Science",
         },
       ],
     },
@@ -281,24 +289,29 @@ export const translations: Record<Locale, Translations> = {
       title: "Projets",
       viewCode: "Code",
       viewDemo: "Démo",
+      allCategories: "Tous",
+      noProjects: "Aucun projet trouvé",
       items: [
         {
           name: "Analyse d'un sondage sur les professions de la data",
           description:
             "Projet personnel utilisant Power BI pour analyser un sondage sur les professions de la data. Extraction, nettoyage et transformation des données brutes pour créer un tableau de bord interactif et comprendre les tendances du marché.",
           tech: ["Power BI", "Analyse de données", "Visualisation de données"],
+          category: "Data Science",
         },
         {
           name: "Portfolio d'algorithmes pour l'analyse du jeu de données sur le Titanic",
           description:
             "Projet de 5ème année utilisant différents algorithmes d'apprentissage automatique pour l'analyse du dataset Titanic. Amélioration continue du portfolio en explorant de nouvelles méthodes et en ajustant les hyperparamètres pour optimiser les résultats.",
           tech: ["Python", "Machine Learning", "Data Science"],
+          category: "Data Science",
         },
         {
           name: "Création de dashboards en R et Python",
           description:
             "Projet de 4ème année créant des tableaux de bord interactifs en R et Python. Nettoyage de données d'un jeu de données trouvé sur Internet, conception d'un dashboard interactif, analyse et interprétation des données.",
           tech: ["R", "Python", "Visualisation de données", "Dashboard"],
+          category: "Data Science",
         },
       ],
     },

@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FadeIn } from "./FadeIn";
 import { useTranslation } from "./LanguageProvider";
 
@@ -39,6 +41,21 @@ function GitHubSmallIcon() {
 
 export function Projects() {
   const { t } = useTranslation();
+  const [activeFilter, setActiveFilter] = useState<string>("All");
+
+  // Get all unique categories
+  const categories = useMemo(() => {
+    const cats = new Set(t.projects.items.map((p) => p.category));
+    return ["All", ...Array.from(cats).sort()];
+  }, [t.projects.items]);
+
+  // Filter projects based on active filter
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "All") {
+      return t.projects.items;
+    }
+    return t.projects.items.filter((p) => p.category === activeFilter);
+  }, [t.projects.items, activeFilter]);
 
   return (
     <section id="projects" className="px-6 py-24">
@@ -48,51 +65,108 @@ export function Projects() {
             {t.projects.title}
           </h2>
         </FadeIn>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {t.projects.items.map((project, i) => (
-            <FadeIn key={project.name} delay={i * 0.1}>
-              <div className="flex h-full flex-col rounded-xl border border-border p-6 transition-colors hover:border-foreground/20">
-                <h3 className="text-lg font-semibold">{project.name}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                  {project.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full bg-surface px-2.5 py-0.5 text-xs text-muted"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-4 flex gap-4">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-foreground"
-                    >
-                      <GitHubSmallIcon />
-                      {t.projects.viewCode}
-                    </a>
-                  )}
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-foreground"
-                    >
-                      <ExternalLinkIcon />
-                      {t.projects.viewDemo}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </FadeIn>
-          ))}
+
+        {/* Filter Buttons */}
+        <FadeIn delay={0.1}>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveFilter(category)}
+                aria-label={`Filter by ${category}`}
+                className={`touch-manipulation rounded-full px-4 py-2 text-sm font-medium transition-all active:scale-95 ${
+                  activeFilter === category
+                    ? "bg-foreground text-background"
+                    : "border border-border bg-surface text-muted hover:border-foreground/30 hover:text-foreground"
+                }`}
+              >
+                {category === "All" ? t.projects.allCategories : category}
+              </button>
+            ))}
+          </div>
+        </FadeIn>
+
+        {/* Projects Grid */}
+        <div className="mt-10">
+          <AnimatePresence mode="wait">
+            {filteredProjects.length === 0 ? (
+              <motion.div
+                key="no-projects"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="py-12 text-center text-muted"
+              >
+                {t.projects.noProjects}
+              </motion.div>
+            ) : (
+              <motion.div
+                key={activeFilter}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="grid gap-6 sm:grid-cols-2"
+              >
+                {filteredProjects.map((project, i) => (
+                  <motion.div
+                    key={project.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                    whileHover={{ y: -4 }}
+                    className="h-full"
+                  >
+                    <div className="group flex h-full flex-col rounded-xl border border-border bg-surface/50 p-6 transition-all hover:border-foreground/20 hover:bg-surface hover:shadow-lg">
+                      <h3 className="text-lg font-semibold transition-colors group-hover:text-foreground">
+                        {project.name}
+                      </h3>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                        {project.description}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {project.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="rounded-full bg-surface px-2.5 py-0.5 text-xs text-muted transition-colors group-hover:bg-foreground/10"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="mt-4 flex gap-4">
+                        {project.github && (
+                          <motion.a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-foreground"
+                          >
+                            <GitHubSmallIcon />
+                            {t.projects.viewCode}
+                          </motion.a>
+                        )}
+                        {project.demo && (
+                          <motion.a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-foreground"
+                          >
+                            <ExternalLinkIcon />
+                            {t.projects.viewDemo}
+                          </motion.a>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
