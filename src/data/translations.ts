@@ -67,7 +67,7 @@ export const translations: Record<Locale, Translations> = {
     hero: {
       role: "Data Scientist | Web Developer",
       tagline:
-        "Recently graduated, I am enthusiastic and eager to learn and actively contribute to your team. Passionate about data science, AI, and full-stack development.",
+        "I am enthusiastic and eager to learn and actively contribute to your team. Passionate about data science, AI, and full-stack development.",
       cta: "Get in touch",
       ctaSecondary: "View my work",
       resume: "Resume",
@@ -214,7 +214,7 @@ export const translations: Record<Locale, Translations> = {
     hero: {
       role: "Data Scientist | Développeuse Web",
       tagline:
-        "Fraîchement diplômée, je suis enthousiaste et désireuse d'apprendre et de contribuer activement à votre équipe. Passionnée par la data science, l'IA et le développement full-stack.",
+        "Je suis enthousiaste et désireuse d'apprendre et de contribuer activement à votre équipe. Passionnée par la data science, l'IA et le développement full-stack.",
       cta: "Me contacter",
       ctaSecondary: "Voir mon parcours",
       resume: "CV",
