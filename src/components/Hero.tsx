@@ -39,7 +39,7 @@ export function Hero() {
           custom={0}
           className="mb-8"
         >
-          {/* Replace src with your photo: /avatar.jpg (place in public/) */}
+          {/*TODO:  Replace src with photo: /avatar.jpg (place in public/) */}
           <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-border bg-surface">
             <Image
               src="/avatar.jpg"
