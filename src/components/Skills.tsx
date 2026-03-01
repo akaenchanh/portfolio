@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { FadeIn } from "./FadeIn";
 import { useTranslation } from "./LanguageProvider";
 
@@ -21,13 +22,22 @@ export function Skills() {
                 {group.category}
               </h3>
               <div className="mt-3 flex flex-wrap gap-2">
-                {group.items.map((skill) => (
-                  <span
+                {group.items.map((skill, skillIndex) => (
+                  <motion.span
                     key={skill}
-                    className="rounded-full border border-border px-3 py-1 text-sm text-muted transition-colors hover:border-foreground/30 hover:text-foreground"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.3,
+                      delay: i * 0.1 + skillIndex * 0.05,
+                      ease: "easeOut",
+                    }}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    className="rounded-full border border-border bg-surface/50 px-3 py-1 text-sm text-muted transition-all hover:border-foreground/30 hover:bg-surface hover:text-foreground hover:shadow-sm"
                   >
                     {skill}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </FadeIn>
